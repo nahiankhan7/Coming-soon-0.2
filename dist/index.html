@@ -11,13 +11,17 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 
-    <style></style>
+    <style>
+      .transition-page {
+        transition: top 0.5s ease;
+      }
+    </style>
   </head>
-  <body class="relative w-[100%] h-dvh lg:overflow-hidden">
+  <body class="relative w-[100%] h-dvh lg:overflow-hidden scroll-smooth">
     <!-- home section -->
     <div
       id="homePage"
-      class="h-dvh w-[100%] lg:absolute lg:left-0 lg:top-0 flex flex-col">
+      class="h-dvh w-[100%] lg:absolute lg:left-0 lg:top-0 flex flex-col transition-page">
       <!-- background video -->
       <video
         autoplay
@@ -34,24 +38,26 @@
         class="absolute h-dvh w-full bg-black bg-opacity-50 flex flex-col items-center justify-center gap-y-10 lg:gap-y-14">
         <!-- header text -->
         <div
-          class="text-center text-white flex flex-col justify-center items-center font-moderu">
-          <h4 class="uppercase tracking-[5px] text-base lg:text-xl">
+          class="text-center text-white flex flex-col justify-center items-center">
+          <h4 class="uppercase tracking-[5px] font-moderu text-base lg:text-xl">
             Something Amazing is on the
-            <span class="text-orange-500 animate-pulse font-semibold"
+            <span
+              class="text-orange-500 font-moderu animate-pulse font-semibold"
               >Way!</span
             >
           </h4>
           <h3
-            class="uppercase tracking-[12px] text-[38px] lg:text-[40px] font-light">
+            class="uppercase tracking-[12px] font-moderu text-[38px] lg:text-[40px] font-light">
             we're launching our
           </h3>
           <h1
-            class="uppercase tracking-[10px] text-[40px] lg:text-[45px] font-semibold">
+            class="uppercase tracking-[10px] font-moderu text-[40px] lg:text-[45px] font-semibold">
             new
-            <span class="text-sky-500 font-bold">website</span>
+            <span class="text-sky-500 font-bold font-moderu">website</span>
           </h1>
-          <div class="w-[380px] lg:w-[500px] mt-2 lg:mt-4">
-            <p class="lg:text-[20px] text-[18px] w-full text-gray-200">
+          <div class="w-[425px] lg:w-[500px] mt-2 lg:mt-4">
+            <p
+              class="lg:text-[20px] text-[18px] w-full font-moderu text-gray-200">
               We're hard at work crafting something truly special just for you.
               Stay tuned—it's going to be worth the wait!
             </p>
@@ -105,9 +111,9 @@
         </div>
 
         <!-- info button  -->
-        <div class="flex justify-center items-center gap-x-4 font-moderu">
-          <button class="sky-btn">Notify Me</button>
-          <button class="orange-btn">About Us</button>
+        <div class="flex justify-center items-center gap-x-4">
+          <button class="sky-btn font-moderu">Notify Me</button>
+          <button id="aboutBtn" class="orange-btn font-moderu">About Us</button>
         </div>
       </div>
     </div>
@@ -165,32 +171,36 @@
 
     <div
       id="aboutUs"
-      class="bg-zinc-900 py-5 lg:absolute lg:h-dvh w-full overflow-x-auto transition-all ease-in-out duration-1000">
+      class="bg-zinc-900 py-5 lg:absolute lg:h-dvh w-full lg:top-[100%] overflow-x-auto">
       <!-- header text  -->
       <div class="flex flex-col justify-center items-center gap-y-8 my-16">
         <h2
-          class="uppercase tracking-widest lg:text-3xl text-2xl font-light text-gray-500">
-          about <span class="uppercase text-gray-800 font-semibold">us</span>
+          class="uppercase font-moderu tracking-widest lg:text-4xl text-3xl font-light text-gray-300">
+          about
+          <span class="uppercase font-moderu text-gray-200 font-semibold"
+            >us</span
+          >
         </h2>
 
-        <div class="w-[50px] h-[1.5px] bg-slate-500"></div>
+        <div
+          class="h-[3px] w-[80px] bg-gradient-to-r from-sky-500 to-orange-500"></div>
 
-        <div class="lg:max-w-[390px] max-w-[300px]">
-          <p class="text-center lg:text-base text-sm w-full text-gray-600">
+        <div class="w-[425px] lg:w-[500px] px-2 lg:px-0">
+          <p
+            class="text-center font-moderu lg:text-[20px] text-base w-full text-gray-300">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
             recusandae similique dolorum totam eius iure.
           </p>
         </div>
 
-        <div class="flex justify-center items-center text-base gap-x-5">
-          <a href=""><i class="fa-brands fa-facebook-f icon-style"></i></a>
-          <a href=""><i class="fa-brands fa-twitter icon-style"></i></a>
-          <a href=""
-            ><i class="fa-brands fa-square-instagram icon-style"></i
-          ></a>
-          <a href=""><i class="fa-brands fa-square-whatsapp icon-style"></i></a>
+        <div
+          class="flex justify-center items-center text-base gap-x-5 lg:gap-x-7">
+          <a href=""><i class="fa-brands fa-facebook icon-style"></i></a>
+          <a href=""><i class="fa-brands fa-x-twitter icon-style"></i></a>
+          <a href=""><i class="fa-brands fa-instagram icon-style"></i></a>
+          <a href=""><i class="fa-brands fa-whatsapp icon-style"></i></a>
           <a href="mailto:thenewkhan7@gmail.com"
-            ><i class="fa-solid fa-envelope icon-style"></i
+            ><i class="fa-regular fa-envelope icon-style"></i
           ></a>
         </div>
       </div>
@@ -272,12 +282,16 @@
         <!-- header text  -->
         <div class="lg:my-10 flex flex-col gap-y-8 justify-center items-center">
           <h2
-            class="uppercase tracking-widest lg:text-3xl text-2xl font-semibold text-gray-800">
+            class="uppercase font-moderu tracking-widest lg:text-4xl text-3xl font-semibold text-gray-200">
             contact
           </h2>
-          <div class="w-[50px] h-[1.5px] bg-slate-500"></div>
-          <div class="max-w-[400px]">
-            <p class="text-center lg:text-base text-sm w-full text-gray-600">
+
+          <div
+            class="h-[3px] w-[80px] bg-gradient-to-r from-sky-500 to-orange-500"></div>
+
+          <div class="w-[420px] lg:w-[500px] px-2 lg:px-0">
+            <p
+              class="text-center font-moderu lg:text-[20px] text-base w-full text-gray-300">
               We launch our new website soon.<br />
               Please stay updated and follow.
             </p>
@@ -286,53 +300,53 @@
 
         <!-- form wrapper -->
         <div class="mt-14 flex flex-col justify-center items-center">
-          <div class="flex flex-col justify-center gap-y-5 w-[60%]">
-            <label class="relative">
-              <input
-                required
-                type="text"
-                class="p-2 w-full text-gray-800 bg-transparent outline-none border-2 border-gray-400 rounded hover:border-gray-600 duration-200 peer focus:border-gray-800" />
-              <span class="absolute input-label">name</span>
-            </label>
+          <div
+            class="flex flex-col justify-center gap-y-5 w-[60%] lg:w-[40%] px-2">
+            <input
+              placeholder="Name"
+              required
+              type="text"
+              class="p-2 w-full font-moderu pl-0 text-gray-100 bg-transparent outline-none border-b-2 border-sky-800 hover:border-sky-600 duration-200 peer focus:border-sky-500" />
 
-            <label class="relative">
-              <input
-                required
-                type="text"
-                class="p-2 w-full text-gray-800 bg-transparent outline-none border-2 border-gray-400 rounded hover:border-gray-600 duration-200 peer focus:border-gray-800" />
-              <span class="absolute input-label">email</span>
-            </label>
+            <input
+              placeholder="Email"
+              required
+              type="text"
+              class="p-2 w-full font-moderu pl-0 text-gray-100 bg-transparent outline-none border-b-2 border-sky-800 hover:border-sky-600 duration-200 peer focus:border-sky-500" />
 
-            <label class="relative">
-              <textarea
-                name=""
-                id=""
-                class="p-2 w-full resize-none text-gray-800 bg-transparent outline-none border-2 border-gray-400 rounded hover:border-gray-600 duration-200 peer focus:border-gray-800"></textarea>
-              <span class="absolute input-label">message</span>
-            </label>
+            <textarea
+              placeholder="Message"
+              name=""
+              id=""
+              class="p-2 w-full pl-0 font-moderu text-gray-100 bg-transparent outline-none border-b-2 border-sky-800 hover:border-sky-600 duration-200 peer focus:border-sky-500 resize-none"></textarea>
           </div>
 
           <button
             id="sendMsg"
-            class="uppercase text-xs py-3 px-4 my-3 bg-gray-800 hover:bg-gray-900 focus:bg-gray-950 transition ease-in-out duration-200 text-gray-200 hover:text-gray-100 focus:text-gray-50 rounded">
+            class="uppercase font-moderu text-sm lg:text-base py-3 px-4 my-8 bg-orange-700 hover:bg-orange-800 focus:bg-orange-700 transition ease-in-out duration-200 text-gray-200 hover:text-gray-100 focus:text-gray-50 rounded">
             send message
           </button>
 
           <!-- address -->
           <div
-            class="flex justify-center gap-x-5 items-center lg:px-2 px-4 lg:mt-12 mt-10">
+            class="flex justify-center gap-x-16 items-center lg:px-2 px-2 mt-14">
             <div class="flex items-center justify-center gap-x-3">
-              <i class="fa-solid fa-location-dot text-2xl text-gray-600"></i>
-              <address class="text-center text-xs lg:text-sm text-gray-500">
+              <i class="fa-solid fa-location-dot text-2xl text-gray-300"></i>
+              <address
+                class="text-center font-moderu tracking-wide text-sm lg:text-base text-gray-200">
                 West Kafrul, Mollapara,<br />Mukti Housing Road, Dhaka
               </address>
             </div>
-            <span class="bg-slate-500 w-[2px] lg:h-[80px] h-[60px]"></span>
+
+            <div
+              class="h-[30px] w-[3px] bg-gradient-to-b -rotate-45 from-sky-500 to-orange-500"></div>
 
             <div class="flex items-center justify-center gap-x-3">
-              <i class="fa-solid fa-phone text-1xl text-gray-600"></i>
-              <span class="text-center text-[13px] lg:text-sm text-gray-500"
-                >+8801813592100</span
+              <i
+                class="fa-solid fa-mobile-screen-button text-2xl text-gray-300"></i>
+              <span
+                class="text-center font-oswald tracking-widest text-sm lg:text-base text-gray-200 cursor-pointer hover:underline hover:text-sky-500 duration-200"
+                >+8801813-592100</span
               >
             </div>
           </div>

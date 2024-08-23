@@ -1,3 +1,26 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const aboutButton = document.getElementById("aboutBtn"); // Replace with your actual selector
+  const homePage = document.getElementById("homePage"); // Replace with your actual selector
+  const aboutPage = document.getElementById("aboutUs"); // Replace with your actual selector
+
+  if (aboutButton) {
+    aboutButton.addEventListener("click", () => {
+      if (homePage) {
+        homePage.classList.add("animate-fade-out"); // Add an animation class
+        setTimeout(() => {
+          homePage.classList.remove("transition-page");
+          homePage.classList.remove("lg:top-0");
+          homePage.classList.add("lg:top-[100%]");
+        }, 500); // Adjust timeout to match the animation duration
+      }
+      if (aboutPage) {
+        aboutPage.classList.add("transition-page");
+        aboutPage.classList.remove("lg:top-[100%]");
+      }
+    });
+  }
+});
+
 // Reverse countdown timer
 const startDate = new Date("Aug 21, 2025 00:00:00").getTime();
 const x = setInterval(() => {

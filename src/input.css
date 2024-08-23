@@ -12,3 +12,11 @@
 .orange-btn {
      @apply text-[18px] lg:text-[20px] font-semibold text-gray-300 hover:text-orange-300 focus:text-orange-500 active:text-sky-100 underline duration-200 cursor-pointer
 }
+
+.icon-style {
+     @apply text-gray-300 text-[20px] hover:text-gray-100 focus:text-gray-50 active:text-gray-50 duration-200 cursor-pointer
+}
+
+.transition-page {
+     @apply transition-all ease-in-out duration-[0.5s]
+}
