@@ -4,3 +4,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.sky-btn {
+     @apply text-[18px] lg:text-[20px] font-semibold text-gray-300 hover:text-sky-300 focus:text-sky-500 active:text-sky-100 underline duration-200 cursor-pointer
+}
+
+.orange-btn {
+     @apply text-[18px] lg:text-[20px] font-semibold text-gray-300 hover:text-orange-300 focus:text-orange-500 active:text-sky-100 underline duration-200 cursor-pointer
+}

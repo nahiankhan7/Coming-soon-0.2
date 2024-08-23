@@ -9,3 +9,53 @@ In the meantime, why not be the first to know when we go live? Enter your email 
 
 Follow Us:
 [Social Media Icons]
+=========================================
+      <div class="flex lg:flex-nowrap lg:px-2 lg:gap-x-2 flex-wrap my-16">
+        <div class="w-[50%] relative overflow-hidden">
+          <div class="hover:scale-[1.1] transition-all duration-1000">
+            <div
+              class="absolute bg-black inset-0 opacity-10 hover:opacity-0 transition duration-500"></div>
+            <img class="w-full" src="./images/education.jpg" alt="" />
+            <div
+              class="absolute inset-0 flex items-center justify-center text-white opacity-0 hover:opacity-100 transition-opacity duration-500">
+              <p class="text-lg font-semibold uppercase">Education</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-[50%] relative overflow-hidden">
+          <div class="h-full hover:scale-[1.1] transition duration-1000">
+            <div
+              class="absolute bg-black inset-0 opacity-10 hover:opacity-0 transition duration-500"></div>
+            <img class="w-full h-full" src="./images/adventure.jpg" alt="" />
+            <div
+              class="absolute inset-0 flex items-center justify-center text-white opacity-0 hover:opacity-100 transition-opacity duration-500">
+              <p class="text-lg font-semibold uppercase">Adventure</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-[50%] relative overflow-hidden">
+          <div class="hover:scale-[1.1] transition-all duration-1000">
+            <div
+              class="absolute bg-black inset-0 opacity-10 hover:opacity-0 transition duration-500"></div>
+            <img class="w-full" src="./images/city.jpg" alt="" />
+            <div
+              class="absolute inset-0 flex items-center justify-center text-white opacity-0 hover:opacity-100 transition-opacity duration-500">
+              <p class="text-lg font-semibold uppercase">Perspective</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-[50%] relative overflow-hidden">
+          <div class="h-full hover:scale-[1.1] transition-all duration-1000">
+            <div
+              class="absolute bg-black inset-0 opacity-10 hover:opacity-0 transition duration-500"></div>
+            <img class="w-full h-full" src="./images/food.jpg" alt="" />
+            <div
+              class="absolute inset-0 flex items-center justify-center text-white opacity-0 hover:opacity-100 transition-opacity duration-500">
+              <p class="text-lg font-semibold uppercase">Food</p>
+            </div>
+          </div>
+        </div>
+      </div>
