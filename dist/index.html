@@ -13,10 +13,11 @@
 
     <style></style>
   </head>
-  <body class="relative w-[100%] h-screen lg:overflow-hidden font-moderu">
+  <body class="relative w-[100%] h-screen lg:overflow-hidden">
     <!-- home section -->
     <div
       class="h-screen w-[100%] lg:absolute lg:left-0 lg:top-0 flex flex-col z-[-1]">
+      <!-- background video -->
       <video
         autoplay
         loop
@@ -27,23 +28,39 @@
         Your browser does not support the video tag.
       </video>
 
+      <!-- overlay -->
+      <div class="absolute bg-black bg-opacity-50 h-dvh w-[100%]"></div>
+
+      <!-- info button  -->
+      <div
+        class="absolute mt-[20px] ml-7 flex justify-end items-center gap-x-4 font-moderu">
+        <button
+          class="text-[18px] font-semibold text-gray-300 hover:text-sky-500 cursor-pointer">
+          About Us
+        </button>
+        <button class="text-[18px] text-end font-semibold text-gray-300">
+          Contact
+        </button>
+      </div>
+
       <!-- home page  -->
       <div
         id="homePage"
-        class="absolute bg-black bg-opacity-50 h-dvh lg:absolute lg:left-0 lg:top-0 w-[100%] flex flex-col gap-y-14 justify-center items-center transition-all ease-in-out duration-1000">
+        class="absolute h-dvh lg:absolute lg:left-0 lg:top-0 w-[100%] flex flex-col gap-y-10 lg:gap-y-14 justify-center items-center">
         <!-- header text -->
         <div
-          class="text-center text-white flex flex-col justify-center items-center font-oswalds">
+          class="text-center text-white flex flex-col justify-center items-center font-moderu">
           <h3
             class="uppercase tracking-[12px] text-[38px] lg:text-[40px] font-light">
             we're launching our
           </h3>
           <h1
             class="uppercase tracking-[10px] text-[40px] lg:text-[45px] font-semibold">
-            new website
+            new
+            <span class="text-sky-500 font-bold">website</span>
           </h1>
           <div class="w-[350px] lg:w-[480px]">
-            <p class="lg:text-base text-[18px] text-gray-200">
+            <p class="lg:text-[20px] text-[18px] lg:mt-2 text-gray-200">
               We're coming soon! Awesome template to present your future product
               or service.<br />We're working hard to give you the best
               experience!
@@ -51,36 +68,49 @@
           </div>
         </div>
 
-        <!-- arrow icon -->
-        <i class="fa-solid fa-arrow-down-long text-gray-300 text-2xl"></i>
-
-        <!-- info button -->
+        <!-- color divider -->
+        <div
+          class="h-[4px] w-[80px] bg-gradient-to-r from-sky-500 to-orange-500"></div>
 
         <!-- countdown time -->
         <div
-          class="flex justify-center items-center lg:gap-x-8 gap-x-5 text-gray-200 font-semibold">
+          class="flex justify-center items-center lg:gap-x-10 gap-x-6 text-gray-200 font-semibold">
           <div class="flex flex-col items-center justify-center">
             <p
               id="days"
-              class="lg:text-4xl text-3xl animate-pulse text-orange-500 font-bold">
+              class="lg:text-4xl text-3xl font-oswald animate-bounce text-sky-500 font-bold tracking-wide">
               00
             </p>
-            <span class="lg:text-xl text-base">Days</span>
+            <span class="lg:text-xl text-base text-orange-500 font-moderu"
+              >Days</span
+            >
           </div>
 
           <div class="flex flex-col items-center justify-center">
-            <p id="hours" class="lg:text-4xl text-3xl">00</p>
-            <span class="lg:text-xl text-base">Hrs</span>
+            <p
+              id="hours"
+              class="lg:text-4xl text-3xl font-oswald tracking-wide">
+              00
+            </p>
+            <span class="lg:text-xl text-base font-moderu">Hrs</span>
           </div>
 
           <div class="flex flex-col items-center justify-center">
-            <p id="minute" class="lg:text-4xl text-3xl">00</p>
-            <span class="lg:text-xl text-base">Min</span>
+            <p
+              id="minute"
+              class="lg:text-4xl text-3xl font-oswald tracking-wide">
+              00
+            </p>
+            <span class="lg:text-xl text-base font-moderu">Min</span>
           </div>
 
           <div class="flex flex-col items-center justify-center">
-            <p id="second" class="lg:text-4xl text-3xl">00</p>
-            <span class="lg:text-xl text-base">Sec</span>
+            <p
+              id="second"
+              class="lg:text-4xl text-3xl font-oswald tracking-wide">
+              00
+            </p>
+            <span class="lg:text-xl text-base font-moderu">Sec</span>
           </div>
         </div>
       </div>
