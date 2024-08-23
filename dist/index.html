@@ -11,30 +11,77 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 
-    <style>
-      .bg-img {
-        background-image: url(./images//blackbg.jpg);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
-    </style>
+    <style></style>
   </head>
-  <body class="relative w-[100%] h-dvh lg:overflow-hidden">
+  <body class="relative w-[100%] h-screen lg:overflow-hidden font-moderu">
     <!-- home section -->
     <div
-      class="bg-img h-dvh lg:absolute lg:left-0 lg:top-0 w-[100%] flex flex-col">
-      <div class="">
-        <!-- home text -->
-        <div class="">
-          <h2 class="">Something Amazing is on the Way!</h2>
-          <h1 class=""></h1>
+      class="h-screen w-[100%] lg:absolute lg:left-0 lg:top-0 flex flex-col z-[-1]">
+      <video
+        autoplay
+        loop
+        muted
+        plays-inline
+        class="relative bg-cover bg-center bg-no-repeat aspect-video h-[100vh] w-[100vw] object-cover z-[-1]">
+        <source src="./videos/wave.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      <!-- home page  -->
+      <div
+        id="homePage"
+        class="absolute bg-black bg-opacity-50 h-dvh lg:absolute lg:left-0 lg:top-0 w-[100%] flex flex-col gap-y-14 justify-center items-center transition-all ease-in-out duration-1000">
+        <!-- header text -->
+        <div
+          class="text-center text-white flex flex-col justify-center items-center font-oswalds">
+          <h3
+            class="uppercase tracking-[12px] text-[38px] lg:text-[40px] font-light">
+            we're launching our
+          </h3>
+          <h1
+            class="uppercase tracking-[10px] text-[40px] lg:text-[45px] font-semibold">
+            new website
+          </h1>
+          <div class="w-[350px] lg:w-[480px]">
+            <p class="lg:text-base text-[18px] text-gray-200">
+              We're coming soon! Awesome template to present your future product
+              or service.<br />We're working hard to give you the best
+              experience!
+            </p>
+          </div>
         </div>
-        <!-- learn more button -->
-        <div class="text-gray-100">
-          <button class="uppercase bg-neutral-500 py- px-4 rounded-full">
-            Learn more
-          </button>
+
+        <!-- arrow icon -->
+        <i class="fa-solid fa-arrow-down-long text-gray-300 text-2xl"></i>
+
+        <!-- info button -->
+
+        <!-- countdown time -->
+        <div
+          class="flex justify-center items-center lg:gap-x-8 gap-x-5 text-gray-200 font-semibold">
+          <div class="flex flex-col items-center justify-center">
+            <p
+              id="days"
+              class="lg:text-4xl text-3xl animate-pulse text-orange-500 font-bold">
+              00
+            </p>
+            <span class="lg:text-xl text-base">Days</span>
+          </div>
+
+          <div class="flex flex-col items-center justify-center">
+            <p id="hours" class="lg:text-4xl text-3xl">00</p>
+            <span class="lg:text-xl text-base">Hrs</span>
+          </div>
+
+          <div class="flex flex-col items-center justify-center">
+            <p id="minute" class="lg:text-4xl text-3xl">00</p>
+            <span class="lg:text-xl text-base">Min</span>
+          </div>
+
+          <div class="flex flex-col items-center justify-center">
+            <p id="second" class="lg:text-4xl text-3xl">00</p>
+            <span class="lg:text-xl text-base">Sec</span>
+          </div>
         </div>
       </div>
     </div>
