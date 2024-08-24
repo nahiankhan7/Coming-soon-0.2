@@ -1,8 +1,12 @@
 const aboutButton = document.getElementById("aboutBtn");
-const homePage = document.getElementById("homePage");
 const aboutPage = document.getElementById("aboutUs");
 const aboutCloseButton = document.getElementById("closeButton");
 
+const modalOpenButton = document.getElementById("modalOpen");
+const modalPopup = document.getElementById("modalWrapper");
+const modalCloseButton = document.getElementById("modalCloseButton");
+
+// event listener for about section
 aboutButton?.addEventListener("click", () => {
   aboutPage.style.top = "0%";
   aboutCloseButton?.classList.remove("hidden");
@@ -11,6 +15,47 @@ aboutButton?.addEventListener("click", () => {
 aboutCloseButton?.addEventListener("click", () => {
   aboutPage.style.top = "100%";
   aboutCloseButton?.classList.add("hidden");
+});
+
+// event listener for modal popup
+modalOpenButton?.addEventListener("click", () => {
+  modalPopup?.classList.remove("hidden");
+  setTimeout(() => {
+    modalPopup?.classList.remove("opacity-0");
+    modalPopup?.classList.add("opacity-100");
+  }, 10);
+});
+
+modalCloseButton?.addEventListener("click", () => {
+  modalPopup?.classList.remove("opacity-100");
+  modalPopup?.classList.add("opacity-0");
+
+  setTimeout(() => {
+    modalPopup?.classList.add("hidden");
+  }, 300);
+});
+
+// mobile modal element
+const modalMobileMin = document.getElementById("modalWrapperMin");
+const modalOpenMin = document.getElementById("modalOpenMin");
+const modalCloseMin = document.getElementById("modalCloseMin");
+
+// event listener for modal popup
+modalOpenMin?.addEventListener("click", () => {
+  modalMobileMin?.classList.remove("hidden");
+  setTimeout(() => {
+    modalMobileMin?.classList.remove("opacity-0");
+    modalMobileMin?.classList.add("opacity-100");
+  }, 10);
+});
+
+modalCloseMin?.addEventListener("click", () => {
+  modalMobileMin?.classList.remove("opacity-100");
+  modalMobileMin?.classList.add("opacity-0");
+
+  setTimeout(() => {
+    modalMobileMin?.classList.add("hidden");
+  }, 300);
 });
 
 // Reverse countdown timer
