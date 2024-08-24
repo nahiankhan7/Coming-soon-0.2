@@ -12,16 +12,17 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 
     <style>
-      .transition-page {
-        transition: top 0.5s ease;
+      body,
+      html {
+        scroll-behavior: smooth;
       }
     </style>
   </head>
-  <body class="relative w-[100%] h-dvh lg:overflow-hidden scroll-smooth">
+  <body class="relative w-[100%] h-dvh lg:overflow-hidden">
     <!-- home section -->
     <div
       id="homePage"
-      class="h-dvh w-[100%] lg:absolute lg:left-0 lg:top-0 flex flex-col transition-page">
+      class="h-dvh w-[100%] lg:absolute lg:left-0 lg:top-0 flex flex-col">
       <!-- background video -->
       <video
         autoplay
@@ -113,7 +114,12 @@
         <!-- info button  -->
         <div class="flex justify-center items-center gap-x-4">
           <button class="sky-btn font-moderu">Notify Me</button>
-          <button id="aboutBtn" class="orange-btn font-moderu">About Us</button>
+          <button id="aboutBtn" class="orange-btn font-moderu hidden lg:block">
+            About Us
+          </button>
+          <a href="#aboutUs" class="orange-btn font-moderu lg:hidden"
+            >About Us</a
+          >
         </div>
       </div>
     </div>
@@ -162,16 +168,16 @@
     </div>
 
     <!-- About -->
-    <button
-      id="closeButton"
-      class="absolute hidden opacity-0 bg-gray-100 mt-3 w-[50px] left-[47%] transition-all ease-in-out duration-500">
-      <i
-        class="fa-solid fa-xmark text-3xl cursor-pointer text-slate-600 hover:text-gray-900 transition duration-200"></i>
-    </button>
-
     <div
       id="aboutUs"
-      class="bg-zinc-900 py-5 lg:absolute lg:h-dvh w-full lg:top-[100%] overflow-x-auto">
+      style="top: 100%; transition: top 2000ms ease-in-out"
+      class="bg-zinc-900 py-5 lg:absolute lg:h-dvh w-full overflow-x-auto">
+      <!-- about close button -->
+      <button id="closeButton" class="hidden float-end mr-10 mt-2">
+        <i
+          class="fa-solid fa-xmark text-3xl cursor-pointer text-gray-300 hover:text-gray-50 transition duration-200"></i>
+      </button>
+
       <!-- header text  -->
       <div class="flex flex-col justify-center items-center gap-y-8 my-16">
         <h2

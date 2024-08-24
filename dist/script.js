@@ -1,24 +1,16 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const aboutButton = document.getElementById("aboutBtn"); // Replace with your actual selector
-  const homePage = document.getElementById("homePage"); // Replace with your actual selector
-  const aboutPage = document.getElementById("aboutUs"); // Replace with your actual selector
+const aboutButton = document.getElementById("aboutBtn");
+const homePage = document.getElementById("homePage");
+const aboutPage = document.getElementById("aboutUs");
+const aboutCloseButton = document.getElementById("closeButton");
 
-  if (aboutButton) {
-    aboutButton.addEventListener("click", () => {
-      if (homePage) {
-        homePage.classList.add("animate-fade-out"); // Add an animation class
-        setTimeout(() => {
-          homePage.classList.remove("transition-page");
-          homePage.classList.remove("lg:top-0");
-          homePage.classList.add("lg:top-[100%]");
-        }, 500); // Adjust timeout to match the animation duration
-      }
-      if (aboutPage) {
-        aboutPage.classList.add("transition-page");
-        aboutPage.classList.remove("lg:top-[100%]");
-      }
-    });
-  }
+aboutButton?.addEventListener("click", () => {
+  aboutPage.style.top = "0%";
+  aboutCloseButton?.classList.remove("hidden");
+});
+
+aboutCloseButton?.addEventListener("click", () => {
+  aboutPage.style.top = "100%";
+  aboutCloseButton?.classList.add("hidden");
 });
 
 // Reverse countdown timer
